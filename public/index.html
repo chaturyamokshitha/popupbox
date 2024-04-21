@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link href="./output.css" rel="stylesheet">
+   
+</head>
+
+<body class="bg-blue-900">
+    <div class="flex justify-center items-center mt-72">
+        <button class=" w-32 bg-white text-xl rounded-md text-center h-10 " id="open">Submit</button>
+    </div>
+    <div class=" hidden  " id="close">
+        <div class="bg-white  text-center  rounded-md p-6 max-w-80  ">
+            <i class="fa-solid fa-circle-check fa-2xl relative bottom-8" style="color: #42ff7b;"></i>
+            <h1 class="text-xl mb-2">Thank You!</h1>
+            <p class="text-sm mb-4">
+                Your details has been successfully submitted.Thanks!
+            </p>
+            <button class="bg-green-400 h-10 w-32 rounded-md text-white" id="ok">OK</button>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/9f5026aa16.js" crossorigin="anonymous"></script>
+    <script>
+        var open = document.getElementById("open");
+        var close = document.getElementById("close");
+        var okay=document.getElementById("ok");
+        open.addEventListener("click", () => {
+            close.style.display="flex";
+            close.style.justifyContent = "center";
+         
+           open.style.display="none";
+          
+        
+        })
+
+        okay.addEventListener("click",()=>{
+            close.style.display="none";
+            open.style.display="flex";
+            open.style.justifyContent="center";
+            
+        }
+    )
+    </script>
+</body>
+
+</html>
